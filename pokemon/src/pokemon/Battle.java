@@ -30,7 +30,10 @@ public class Battle {
 		}
 		
 		System.out.println("-------------------------------------------");
-		if(pokemon1.getHealth() <= 0) {
+		
+		if(pokemon1.getHealth() <= 0 && pokemon2.getHealth() <= 0) {
+			System.out.println("Los dos pokemon se han debilitado");
+		} else if(pokemon1.getHealth() <= 0) {
 			System.out.println(pokemon1.getName() + " ha perdido el combate");
 		} else {
 			System.out.println(pokemon2.getName() + " ha perdido el combate");

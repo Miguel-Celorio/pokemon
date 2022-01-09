@@ -45,4 +45,29 @@ public class App {
         Battle.initBattle(pokemons[primerPokemon - 1], pokemons[segundoPokemon - 1]);
     }
     
+    private static void main(String[] args) {
+    	int seleccion = 3;
+    	do {
+    		System.out.println("Elija la opcion: \n1. Utilizar los pokemon del juego\n2. Crear los pokemon aleatoriamente\n3. Salir");
+    		seleccion = sc.nextInt();
+    		if(seleccion == 1) {
+    			initPokemons();
+    			initCombat();
+    		} else if (seleccion == 2) {
+    			initPokemonsRandomly();
+    			initCombat();
+    		} else if (seleccion < 1 || seleccion > 3){
+    			System.out.println("Debe elegir un numero entre 1 y 3");
+    		}
+
+    	} while (seleccion != 3);
+    	
+    	System.out.println("Fin del programa");
+    }
 }
+
+
+
+
+
+
